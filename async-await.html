@@ -1,0 +1,18 @@
+<script>
+    async function fazerRequisicao() {
+        const requisicao = await fetch("https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json");
+        const data = await requisicao.json;
+    }
+
+    async function umaFuncao() {
+        var fator1 = 55;
+        var fator2 = 88;
+        resultudo = fator1 + fator2;
+        console.log("Este comando está dentro da função");
+
+        return "E se eu tentar retornar um valor?"
+    }
+
+    fazerRequisicao();
+    console.log(umaFuncao())
+</script>

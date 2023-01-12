@@ -1,0 +1,50 @@
+<script>
+    function criaPost (dados) {
+        mineRede.posts.push({
+            id: mineRede.posts.length + 1,
+            owner: dados.owner,
+            post: dados.post,
+        })
+    }
+
+    function pegaPosts () {
+        return mineRede.posts;
+    }
+
+    function atualizaPost (id, conteudo) {
+        let postUpdate = pegaPosts().find((post) => {
+            return mineRede.posts.id = id;
+        })
+
+        postUpdate.post = conteudo;
+    }
+
+    function apagaPost(id) {
+        const listaDePost = pegaPosts().filter((postAtual) => {
+            return postAtual.id != id;
+        })
+
+        mineRede.posts = listaDePost;
+    }
+
+    var mineRede = {
+        usuarios: [
+            {
+                username: 'welllytu',
+                bio: 'Apenas um deve iniando sua jornada',
+            }
+        ],
+        posts: [
+            {
+                id: 1,
+                owner: 'wellytu',
+                post: 'Meu primeiro post',
+            }
+        ],
+    }
+
+    criaPost({owner: 'wellytu', post: 'Estou aprendendo a fazer CRUD.'});
+    atualizaPost(1, 'Novo conteúdo do post.');
+    criaPost({owner: 'wellytu', post: 'Quero morrer.'});
+    apagaPost(1);
+</script>
