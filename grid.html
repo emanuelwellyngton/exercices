@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+</head>
+<style>
+    .grid {
+        display: grid;
+        list-style: none;
+        grid-template-columns: repeat(3, minmax(50px, 100px));
+        grid-auto-rows: minmax(30vh, auto);
+        height: auto;
+    }
+
+    .grid-item {
+        background-color: red;
+        border: 1px solid black;
+    }
+</style>
+<body>
+    <ul class="grid">
+        <li class="grid-item"></li>
+        <li class="grid-item"></li>
+        <li class="grid-item"></li>
+        <li class="grid-item"></li>
+        <li class="grid-item"></li>
+        <li class="grid-item"></li>
+        <li class="grid-item"></li>
+        <li class="grid-item"></li>
+        <li class="grid-item"></li>
+        <li class="grid-item"></li>
+        <li class="grid-item"></li>
+        <li class="grid-item"></li>
+        <li class="grid-item"></li>
+        <li class="grid-item"></li>
+    </ul>
+</body>
+</html>

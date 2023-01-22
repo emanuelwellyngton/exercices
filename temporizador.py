@@ -15,4 +15,4 @@ alarme_horas = alarme_total_horas % 24
 dia = (dia + alarme_dias) % 30
 hora = (hora + alarme_horas) % 24
 
-print("O alarme tocará ás",hora, ":00", "do dia", dia, "de Janeiro")
+print("O alarme tocará ás",hora, ":00", "do dia", dia, "de", mes)
