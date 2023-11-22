@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script> 
+</head>
+<body>
+    <h1>Estudando jQuery</h1>
+    <h2 class="main" title="algumtexto">Escrevi esse texto no HTML</h1>
+    <script>
+        $(function () {
+            let h1 = $("[title^='algum']");
+            h1.addClass("main");
+            $(".main").text("Mudei o texto dinamicamento");
+            console.log(h1);
+
+            $("h1").click(function() {
+                $(this).hide();
+            })
+
+            $("h2").after("<h2>Fui criado dinamicamente</h2>");
+
+            $(".main").prepend("<div>");
+
+            $("h2").click(function() {
+                let color = $(this).css({"color":"red", "font-size":"50px"});
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+</head>
+<body>
+    <main>
+        <h1>Meus repositórios</h1>
+        <ul id="repositorios"></ul>
+    </main>
+    <script>
+        $(function() {
+            let url = "https://api.github.com/users/emanuelwellyngton/repos"
+            fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(element => {
+                    $("#repositorios").append(`<li>${element.name}</li>`)
+                });
+            })
+            .catch(err => console.log(err));
+        })
+    </script>
+</body>
+</html>
